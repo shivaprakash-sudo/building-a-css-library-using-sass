@@ -30,8 +30,53 @@ img {
     max-width: 100%;
 }
 
+// theme colours
+$primary: #326dee;
+$secondary: #1ac888;
+$error: #d32752;
+$info: #f6c31c;
+
+// spacing
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+// borders
+$base-border-width: 1px;
+$base-border-radius: 0.85rem;
+
 h1 {
-    a {
-        color: red;
-    }
+    color: $primary;
+}
+
+a {
+    color: $secondary;
+}
+
+.error {
+    color: $error;
+    border: $base-border-width solid $error;
+}
+
+.info {
+    color: $info;
+    border: $base-border-width solid $info;
+}
+
+.error,
+.info,
+button {
+    margin: $base-margin;
+    padding: $base-padding;
+    border-radius: $base-border-radius;
+    -webkit-border-radius: $base-border-radius;
+    -moz-border-radius: $base-border-radius;
+    -ms-border-radius: $base-border-radius;
+    -o-border-radius: $base-border-radius;
+}
+
+button {
+    color: #fff;
+    border: none;
+    background: $primary;
+    cursor: pointer;
 }
