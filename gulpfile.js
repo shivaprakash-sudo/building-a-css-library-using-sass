@@ -6,11 +6,11 @@ const { src, dest, watch, series } = pkgs;
 const sass = gulpSass(library);
 
 function buildStyles() {
-    return src("styles.scss").pipe(sass()).pipe(dest("css"));
+    return src("contra/**/*.scss").pipe(sass()).pipe(dest("css"));
 }
 
 function watchStyles() {
-    watch(["styles.scss"], buildStyles);
+    watch(["contra/**/*.scss"], buildStyles);
 }
 
 export default series(buildStyles, watchStyles);
