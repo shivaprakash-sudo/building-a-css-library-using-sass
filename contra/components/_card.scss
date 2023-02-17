@@ -1,0 +1,24 @@
+@use "variables" as *;
+
+.card {
+    font-size: $base-font-size;
+    padding: $base-padding;
+    border: $base-border-width solid #ddd;
+    box-shadow: $base-box-shadow;
+    border-radius: calc($base-border-radius/2);
+    -webkit-border-radius: calc($base-border-radius/2);
+    -moz-border-radius: calc($base-border-radius/2);
+    -ms-border-radius: calc($base-border-radius/2);
+    -o-border-radius: calc($base-border-radius/2);
+
+    .card-title {
+        padding-block-end: $base-padding;
+        font-weight: bold;
+    }
+
+    .card-body {
+        a {
+            text-decoration: underline;
+        }
+    }
+}
