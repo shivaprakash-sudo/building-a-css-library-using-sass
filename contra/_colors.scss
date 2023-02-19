@@ -9,25 +9,27 @@
         background: $val;
     }
 
-    // light variations
-    @for $i from 1 through 9 {
-        .text-#{$key}-light-#{$i} {
-            color: mix(#fff, $val, $i * 10%);
+    @if ($key != "black" and $key != "white") {
+        // light variations
+        @for $i from 1 through 9 {
+            .text-#{$key}-light-#{$i} {
+                color: mix(#fff, $val, $i * 10%);
+            }
+
+            .bg-#{$key}-light-#{$i} {
+                background: mix(#fff, $val, $i * 10%);
+            }
         }
 
-        .bg-#{$key}-light-#{$i} {
-            background: mix(#fff, $val, $i * 10%);
-        }
-    }
+        // dark variations
+        @for $i from 1 through 9 {
+            .text-#{$key}-dark-#{$i} {
+                color: mix(#000, $val, $i * 10%);
+            }
 
-    // dark variations
-    @for $i from 1 through 9 {
-        .text-#{$key}-dark-#{$i} {
-            color: mix(#000, $val, $i * 10%);
-        }
-
-        .bg-#{$key}-dark-#{$i} {
-            background: mix(#000, $val, $i * 10%);
+            .bg-#{$key}-dark-#{$i} {
+                background: mix(#000, $val, $i * 10%);
+            }
         }
     }
 }
