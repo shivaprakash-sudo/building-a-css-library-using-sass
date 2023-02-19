@@ -21,4 +21,8 @@
             text-decoration: underline;
         }
     }
+
+    .test-btn {
+        background: map-get($map: $colors, $key: "primary");
+    }
 }
