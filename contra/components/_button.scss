@@ -1,0 +1,40 @@
+@use "variables" as *;
+
+@mixin btn($bg-color: #e2e2e2) {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    padding: $base-padding $base-padding * 2;
+    background: $bg-color;
+    transition: all 200ms ease-in-out;
+    border-radius: $base-border-radius;
+    -webkit-border-radius: $base-border-radius;
+    -moz-border-radius: $base-border-radius;
+    -ms-border-radius: $base-border-radius;
+    -o-border-radius: $base-border-radius;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -ms-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+}
+
+.btn {
+    @include btn;
+}
+
+@each $key, $val in $colors {
+    .btn-#{$key} {
+        @include btn($val);
+        &:hover {
+            background: lighten($color: $val, $amount: 5);
+        }
+    }
+
+    .btn-outlined-#{$key} {
+        @include btn(#fff);
+        border: $base-border-width * 2 solid $val;
+        &:hover {
+            background: $val;
+        }
+    }
+}
