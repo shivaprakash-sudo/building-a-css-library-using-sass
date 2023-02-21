@@ -1,0 +1,45 @@
+@use "sass:math";
+@use "breakpoints" as *;
+
+$grid-columns: 12;
+
+// base layout classes
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+@mixin generate-col-class($breakpoint) {
+    @for $col-num from 1 through $grid-columns {
+        .col-#{$col-num}-#{$breakpoint} {
+            box-sizing: border-box;
+            flex-grow: 0;
+            width: math.div($col-num * 100%, $grid-columns);
+        }
+    }
+}
+
+// column classes
+@include xs {
+    @include generate-col-class(xs);
+}
+@include sm {
+    @include generate-col-class(sm);
+}
+@include md {
+    @include generate-col-class(md);
+}
+@include lg {
+    @include generate-col-class(lg);
+}
+@include xl {
+    @include generate-col-class(xl);
+}
