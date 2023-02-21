@@ -14,11 +14,6 @@ $breakpoints: (
 //     }
 // }
 
-@mixin xs {
-    @media (min-width: map-get($breakpoints, "xs")) {
-        @content;
-    }
-}
 @mixin sm {
     @media (min-width: map-get($breakpoints, "sm")) {
         @content;
@@ -47,9 +42,6 @@ $breakpoints: (
 }
 
 .respsonsive-test {
-    @include xs {
-        color: red;
-    }
     @include sm {
         color: blue;
     }
