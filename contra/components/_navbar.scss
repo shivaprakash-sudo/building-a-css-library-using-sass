@@ -1,0 +1,30 @@
+@use "../variables" as *;
+
+%flex-layout {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    @extend %flex-layout;
+    padding: $base-padding;
+    box-shadow: $base-box-shadow;
+
+    .site-title {
+        font-size: $font-size-xl;
+    }
+
+    .container {
+        @extend %flex-layout;
+    }
+}
+
+// coloured navbars
+@each $key, $value in $colors {
+    .nav-#{$key} {
+        @extend .nav;
+        background: $value;
+    }
+}
