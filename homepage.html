@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contra Designs</title>
+        <link rel="stylesheet" href="./css/styles.css" />
+    </head>
+    <body>
+        <!-- navbar -->
+        <header class="nav">
+            <nav class="container">
+                <h1 class="site-title">Contra Designs</h1>
+                <ul class="d-flex gap-3">
+                    <li class="text-hover-secondary">
+                        <a href="#about">About us</a>
+                    </li>
+                    <li class="text-hover-secondary">
+                        <a href="#work">Our Work</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- hero -->
+            <section
+                id="hero"
+                class="container py-4 row justify-between align-center"
+            >
+                <div class="col-5-md">
+                    <h2 class="font-xxl">
+                        Fire up
+                        <span class="text-secondary">Your website</span>
+                    </h2>
+                    <p class="my-2">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit.
+                    </p>
+                    <a href="#work" class="btn-primary text-white">
+                        View our work
+                    </a>
+                </div>
+                <div class="col-5-md">
+                    <img src="./images/laptop.svg" alt="Laptop" />
+                </div>
+            </section>
+
+            <!-- about -->
+            <section id="about" class="bg-secondary-light-7 py-4">
+                <article class="container">
+                    <h2 class="mb-1">About Contra</h2>
+                    <p class="mb-1">
+                        Lorem ipsum dolor sit` amet consectetur adipisicing
+                        elit. Sed pariatur harum quisquam officiis et, at
+                        possimus? Consectetur deleniti ad velit? Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Reiciendis,
+                        minima.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Sunt dicta autem, rem ratione minima molestias hic
+                        laborum distinctio voluptates reprehenderit tenetur
+                        laboriosam repudiandae nobis ab vitae itaque! Veniam,
+                        non in!
+                    </p>
+                </article>
+            </section>
+
+            <!-- work -->
+            <section id="work" class="container py-4">
+                <h2 class="mb-2">Our Work</h2>
+                <div class="row gap-1 justify-evenly">
+                    <article class="card p-1 col-6-md col-3-xl">
+                        <img
+                            src="./images/doodles.jpg"
+                            alt="doodles of numerous things"
+                        />
+                        <h3 class="card-title">Online Education</h3>
+                        <p class="card-body">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Voluptas, doloremque.
+                        </p>
+                    </article>
+                    <article class="card p-1 col-6-md col-3-xl">
+                        <img src="./images/map.png" alt="" />
+                        <h3 class="card-title">Locate Me</h3>
+                        <p class="card-body">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. At magnam quasi mollitia earum?
+                        </p>
+                    </article>
+                    <article class="card p-1 col-6-md col-3-xl">
+                        <img src="./images/matrix.jpg" alt="" />
+                        <h3 class="card-title">Project 3</h3>
+                        <p class="card-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Molestiae, et!
+                        </p>
+                    </article>
+                    <article class="card p-1 col-6-md col-3-xl">
+                        <img src="./images/responsive-devices.png" alt="" />
+                        <h3 class="card-title">Project 4</h3>
+                        <p class="card-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Maxime alias beatae iste
+                            <a href="#" class="text-hover-secondary">
+                                officiis assumenda
+                            </a>
+                            tenetur mollitia, earum possimus quis quibusdam.
+                        </p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-gray-light-7 py-2 row justify-center">
+            <p>
+                &copy;
+                <span id="year"></span>
+                Contra Designs
+            </p>
+        </footer>
+
+        <script>
+            const year = document.querySelector("#year");
+            const currentYear = new Date().getFullYear();
+            year.textContent = currentYear;
+        </script>
+    </body>
+</html>
